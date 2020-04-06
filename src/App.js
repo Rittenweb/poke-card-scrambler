@@ -1,5 +1,6 @@
 import React from 'react';
 import Card from './Card';
+import GenButton from './GenButton';
 import './App.css';
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <div className='App'>
       <header className='App-header'>
         <Card />
+        <GenButton />
       </header>
     </div>
   );
