@@ -22,4 +22,103 @@
   border-radius: 4%;
   background-color: hsl(108.2, 60%, 35%);
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: black;
+}
+
+.Evolvetext {
+  display: flex;
+  width: 95%;
+  justify-content: space-between;
+  height: 3%;
+  font-size: 5pt;
+}
+
+.Namebar {
+  height: 5%;
+  width: 88%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 11pt;
+  font-weight: bold;
+}
+
+.top-right {
+  display: flex;
+}
+
+.hit-points {
+  color: red;
+}
+
+.type-symbol {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  margin-left: 2px;
+  background-color: darkorchid;
+}
+
+.Portrait {
+  height: 45%;
+  width: 88%;
+  background-color: blue;
+  box-shadow: 4px 4px 8px black;
+}
+
+.Statsbar {
+  height: 3%;
+  width: 77%;
+  background-color: brown;
+  margin-top: 3px;
+  font-size: 6pt;
+}
+
+.Attacks {
+  height: 27%;
+  width: 99%;
+  background-color: cornflowerblue;
+}
+
+.WeakResRet {
+  height: 7%;
+  width: 86%;
+  background-color: darkgoldenrod;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Dexbar {
+  height: 5%;
+  width: 88%;
+  border: 1px solid var(--primary-border);
+  font-size: 6pt;
+  line-height: 8px;
+  text-align: left;
+  padding: 2px;
+}
+
+.wrt-el {
+  font-size: 7pt;
+  margin-top: -3px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.retreat-cost {
+  display: flex;
+}
+
+.Ball {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin: 2px;
+  background-color: darkorchid;
+}
+
+.bottom-bar {
+  font-size: 4pt;
 }
