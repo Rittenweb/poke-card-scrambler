@@ -63,14 +63,16 @@
 .Portrait {
   height: 45%;
   width: 88%;
-  background-color: blue;
   box-shadow: 4px 4px 8px black;
+  background-size: 280px;
+  background-position-x: -27px;
+  background-position-y: -40px;
 }
 
 .Statsbar {
   height: 3%;
   width: 77%;
-  background-color: brown;
+  background-color: var(--primary-border);
   margin-top: 3px;
   font-size: 6pt;
 }
