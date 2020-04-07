@@ -41,7 +41,24 @@ export default function Generator() {
         types.push(null);
         card.weakness = types[Math.floor(Math.random() * 10)];
         card.resistance = types[Math.floor(Math.random() * 10)];
-        console.log(card);
+        return fetch(getUrl());
+      })
+      .then((data) => {
+        return data.json();
+      })
+      .then((data) => {
+        if (data.card.ability) {
+          card.attacks = [data.card.ability];
+        } else {
+          card.attacks = [data.card.attacks[0]];
+        }
+        return fetch(getUrl());
+      })
+      .then((data) => {
+        return data.json();
+      })
+      .then((data) => {
+        card.attacks.push(data.card.attacks[data.card.attacks.length - 1]);
         setCard(card);
       });
   }

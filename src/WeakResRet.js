@@ -10,13 +10,19 @@ export default function WeakResRet(props) {
       <div className='wrt-el'>
         weakness
         {weak != undefined && (
-          <img src={require(`./${weak}`)} alt='W' className='wrt-symbol'></img>
+          <img
+            src={require(`./${weak}`)}
+            alt='W'
+            className='energy-symbol'></img>
         )}
       </div>
       <div className='wrt-el'>
         resistance
         {res != undefined && (
-          <img src={require(`./${res}`)} alt='W' className='wrt-symbol'></img>
+          <img
+            src={require(`./${res}`)}
+            alt='W'
+            className='energy-symbol'></img>
         )}
       </div>
       <div className='wrt-el'>
@@ -26,25 +32,25 @@ export default function WeakResRet(props) {
             <img
               src={require('./colorless.png')}
               alt='C'
-              className='wrt-symbol'></img>
+              className='energy-symbol'></img>
           )}
           {props.retreatNum > 1 && (
             <img
               src={require('./colorless.png')}
               alt='C'
-              className='wrt-symbol'></img>
+              className='energy-symbol'></img>
           )}
           {props.retreatNum > 2 && (
             <img
               src={require('./colorless.png')}
               alt='C'
-              className='wrt-symbol'></img>
+              className='energy-symbol'></img>
           )}
           {props.retreatNum > 3 && (
             <img
               src={require('./colorless.png')}
               alt='C'
-              className='wrt-symbol'></img>
+              className='energy-symbol'></img>
           )}
         </div>
       </div>
