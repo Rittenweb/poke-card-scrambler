@@ -27,6 +27,7 @@ export default function getUrl() {
       ) {
         suffix = Math.ceil(Math.random() * 49).toString();
       }
+      id += suffix;
       break;
     case 4:
       id += 'base5-';

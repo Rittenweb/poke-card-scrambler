@@ -7,13 +7,17 @@ import WeakResRet from './WeakResRet';
 import Dexbar from './Dexbar';
 import Evolvetext from './Evolvetext';
 
-export default function Card() {
+export default function Card(props) {
   return (
     <div className='Card'>
       {/*<StageThumbnail/>*/}
-      <Evolvetext />
-      <Namebar />
-      <Portrait />
+      <Evolvetext name={props.card.name} evolvesFrom={props.card.evolvesFrom} />
+      <Namebar
+        name={props.card.name}
+        hitPoints={props.card.hitPoints}
+        type={props.card.type}
+      />
+      <Portrait image={props.card.image} />
       <Statsbar />
       <Attacks />
       <WeakResRet />

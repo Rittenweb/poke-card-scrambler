@@ -1,14 +1,12 @@
 import React from 'react';
-import Card from './Card';
-import GenButton from './GenButton';
+import Generator from './Generator';
 import './App.css';
 
 function App() {
   return (
     <div className='App'>
       <header className='App-header'>
-        <Card />
-        <GenButton />
+        <Generator />
       </header>
     </div>
   );

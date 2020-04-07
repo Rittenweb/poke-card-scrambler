@@ -1,12 +1,15 @@
 import React from 'react';
 
-export default function Evolvetext() {
+export default function Evolvetext(props) {
   return (
     <div className='Evolvetext'>
       <div>
-        <i>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Evolves from Oddish</i>
+        <i>
+          &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Evolves from{' '}
+          {props.evolvesFrom}
+        </i>
       </div>
-      <div>Put Gloom on the Basic Pokemon</div>
+      <div>Put {props.name} on the Basic Pokemon</div>
     </div>
   );
 }
