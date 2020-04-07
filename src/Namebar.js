@@ -1,13 +1,17 @@
 import React from 'react';
+import getSymbol from './getSymbol';
 
 export default function Namebar(props) {
-  console.log(props.name);
+  let type = getSymbol(props.type);
+
   return (
     <div className='Namebar'>
       <div>{props.name}</div>
       <div className='top-right'>
         <div className='hit-points'>{props.hitPoints} HP</div>
-        <div className='type-symbol'>{props.type}</div>
+        {type != undefined && (
+          <img src={require(`./${type}`)} alt='T' className='type-symbol'></img>
+        )}
       </div>
     </div>
   );
