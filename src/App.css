@@ -58,28 +58,35 @@
 }
 
 .Portrait {
-  height: 45%;
+  height: 44%;
   width: 88%;
   box-shadow: 4px 4px 8px black;
   background-size: 280px;
   background-position-x: -27px;
-  background-position-y: -40px;
+  background-position-y: -42px;
 }
 
 .Statsbar {
   height: 3%;
   width: 77%;
-  background-color: var(--primary-border);
+  background: repeating-linear-gradient(
+    90deg,
+    #9b750a 0px,
+    #ab8624 40px,
+    #ba9838 80px,
+    #caaa4c 120px,
+    #9b750a 160px
+  );
   margin-top: 3px;
   font-size: 6pt;
 }
 
 .Attacks {
-  height: 27%;
+  height: 28%;
   width: 95%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   font-size: 8pt;
 }
 
@@ -118,14 +125,25 @@
   border-top: 1px solid black;
 }
 
-.Dexbar {
-  height: 5%;
-  width: 88%;
-  border: 1px solid var(--primary-border);
+.dexbar-wrap {
+  height: 100%;
+  width: 100%;
   font-size: 6pt;
   line-height: 8px;
-  text-align: left;
-  padding: 2px;
+}
+
+.gradient-wrap {
+  height: 5%;
+  width: 88%;
+  background: repeating-linear-gradient(
+    90deg,
+    #9b750a 0px,
+    #ab8624 40px,
+    #ba9838 80px,
+    #caaa4c 120px,
+    #9b750a 160px
+  );
+  padding: 1px;
 }
 
 .wrt-el {

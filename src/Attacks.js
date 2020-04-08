@@ -8,32 +8,6 @@ export default function Attacks(props) {
     return <div className='Attacks'></div>;
   }
 
-  let textSize1 = scaleText(props.attacks[0].text);
-  let textSize2 = scaleText(props.attacks[1].text);
-
-  function scaleText(str) {
-    if (str.length < 70) {
-      return 8;
-    } else if (str.length < 85) {
-      return 7.5;
-    } else if (str.length < 100) {
-      return 7;
-    } else if (str.length < 115) {
-      return 6.5;
-    } else if (str.length < 130) {
-      return 6;
-    } else if (str.length < 155) {
-      return 5.5;
-    } else {
-      return 5;
-    }
-  }
-
-  let text1 = rename(props.attacks[0].text, props.name);
-  let text2 = rename(props.attacks[1].text, props.name);
-
-  let type = getSymbol(props.type);
-
   let firstName;
   if (props.attacks[0].type) {
     firstName = 'Pokémon Power: ' + props.attacks[0].name;
@@ -46,6 +20,33 @@ export default function Attacks(props) {
       ];
     }
   }
+
+  let textSize1 = scaleText(props.attacks[0].text);
+  let textSize2 = scaleText(props.attacks[1].text);
+
+  function scaleText(str) {
+    if (str.length < 70) {
+      return 8;
+    } else if (str.length < 95) {
+      return 7.5;
+    } else if (str.length < 120) {
+      return 7;
+    } else if (str.length < 145) {
+      return 6.5;
+    } else if (str.length < 170) {
+      return 6;
+    } else if (str.length < 195) {
+      return 5.5;
+    } else {
+      return 5;
+    }
+  }
+
+  let text1 = rename(props.attacks[0].text, props.name);
+  let text2 = rename(props.attacks[1].text, props.name);
+
+  let type = getSymbol(props.type);
+
   return (
     <div className='Attacks'>
       <div className='attack' style={{ paddingBottom: '4px' }}>

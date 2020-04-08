@@ -88,7 +88,11 @@ export default function Card(props) {
         weakness={props.card.weakness}
         resistance={props.card.resistance}
       />
-      <Dexbar />
+      <div className='gradient-wrap'>
+        <div className='dexbar-wrap' style={{ background: `${cardColor}` }}>
+          <Dexbar />
+        </div>
+      </div>
       <div className='bottom-bar'>
         <b>Illus. Ken Sugimori</b> ©1995, 96, 98 Nintendo, Creatures, GAMEFREAK.
         ©1999-2000 Wizards. <b>16/151</b>
