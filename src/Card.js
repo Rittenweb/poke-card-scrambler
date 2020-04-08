@@ -78,7 +78,11 @@ export default function Card(props) {
       />
       <Portrait image={props.card.image} />
       <Statsbar />
-      <Attacks attacks={props.card.attacks} type={props.card.type} />
+      <Attacks
+        attacks={props.card.attacks}
+        type={props.card.type}
+        name={props.card.name}
+      />
       <WeakResRet
         retreatNum={props.card.retreatNum}
         weakness={props.card.weakness}

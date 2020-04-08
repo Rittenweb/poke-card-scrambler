@@ -1,5 +1,6 @@
 import React from 'react';
 import getSymbol from './getSymbol';
+import rename from './rename';
 
 export default function Attacks(props) {
   //TODO: Define first render so that none of the tree is made and conditions like this aren't necessary.
@@ -27,6 +28,9 @@ export default function Attacks(props) {
       return 5;
     }
   }
+
+  let text1 = rename(props.attacks[0].text, props.name);
+  let text2 = rename(props.attacks[1].text, props.name);
 
   let type = getSymbol(props.type);
 
@@ -67,7 +71,7 @@ export default function Attacks(props) {
           </div>
         )}
         <div className='attackText' style={{ fontSize: `${textSize1}pt` }}>
-          <b>{firstName}</b> {props.attacks[0].text}
+          <b>{firstName}</b> {text1}
         </div>
         {props.attacks[0].damage && (
           <div className='damage'>{props.attacks[0].damage}</div>
@@ -96,7 +100,7 @@ export default function Attacks(props) {
           })}
         </div>
         <div className='attackText' style={{ fontSize: `${textSize2}pt` }}>
-          <b>{props.attacks[1].name}</b> {props.attacks[1].text}
+          <b>{props.attacks[1].name}</b> {text2}
         </div>
         {props.attacks[1].damage && (
           <div className='damage'>{props.attacks[1].damage}</div>
