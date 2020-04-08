@@ -7,6 +7,27 @@ export default function Attacks(props) {
     return <div className='Attacks'></div>;
   }
 
+  let textSize1 = scaleText(props.attacks[0].text);
+  let textSize2 = scaleText(props.attacks[1].text);
+
+  function scaleText(str) {
+    if (str.length < 70) {
+      return 8;
+    } else if (str.length < 85) {
+      return 7.5;
+    } else if (str.length < 100) {
+      return 7;
+    } else if (str.length < 115) {
+      return 6.5;
+    } else if (str.length < 130) {
+      return 6;
+    } else if (str.length < 155) {
+      return 5.5;
+    } else {
+      return 5;
+    }
+  }
+
   let type = getSymbol(props.type);
 
   let firstName;
@@ -14,6 +35,12 @@ export default function Attacks(props) {
     firstName = 'Pokémon Power: ' + props.attacks[0].name;
   } else {
     firstName = props.attacks[0].name;
+    if (props.attacks[0].cost.length > props.attacks[1].cost.length) {
+      [props.attacks[0], props.attacks[1]] = [
+        props.attacks[1],
+        props.attacks[0],
+      ];
+    }
   }
   return (
     <div className='Attacks'>
@@ -39,7 +66,7 @@ export default function Attacks(props) {
             })}
           </div>
         )}
-        <div className='attackText'>
+        <div className='attackText' style={{ fontSize: `${textSize1}pt` }}>
           <b>{firstName}</b> {props.attacks[0].text}
         </div>
         {props.attacks[0].damage && (
@@ -68,7 +95,7 @@ export default function Attacks(props) {
             }
           })}
         </div>
-        <div className='attackText'>
+        <div className='attackText' style={{ fontSize: `${textSize2}pt` }}>
           <b>{props.attacks[1].name}</b> {props.attacks[1].text}
         </div>
         {props.attacks[1].damage && (
