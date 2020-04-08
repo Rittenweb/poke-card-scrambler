@@ -21,9 +21,6 @@ export default function Attacks(props) {
     }
   }
 
-  let textSize1 = scaleText(props.attacks[0].text);
-  let textSize2 = scaleText(props.attacks[1].text);
-
   function scaleText(str) {
     if (str.length < 70) {
       return 8;
@@ -44,6 +41,9 @@ export default function Attacks(props) {
 
   let text1 = rename(props.attacks[0].text, props.name);
   let text2 = rename(props.attacks[1].text, props.name);
+
+  let textSize1 = scaleText(text1);
+  let textSize2 = scaleText(text2);
 
   let type = getSymbol(props.type);
 

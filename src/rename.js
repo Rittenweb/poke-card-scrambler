@@ -251,7 +251,7 @@ let pokemon = [
   "Pupitar",
   "Tyranitar",
   "Lugia",
-  "Ho-Oh",
+  "Ho-oh",
   "Celebi"
 ]
 

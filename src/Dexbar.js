@@ -5,8 +5,8 @@ export default function Dexbar() {
   return (
     <div style={{ textAlign: 'left', paddingLeft: '4px' }}>
       <i>
-        It wanders around at night sowing its seeds to create more Oddishes. LV.
-        21 #43
+        Although long extinct, in rare cases, it can be genetically resurrected
+        from fossils. &nbsp; LV. 19 &nbsp; #138
       </i>
     </div>
   );

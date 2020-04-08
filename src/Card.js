@@ -6,6 +6,7 @@ import Attacks from './Attacks';
 import WeakResRet from './WeakResRet';
 import Dexbar from './Dexbar';
 import Evolvetext from './Evolvetext';
+import Stagethumbnail from './Stagethumbnail';
 
 export default function Card(props) {
   let cardColor;
@@ -65,17 +66,23 @@ export default function Card(props) {
     <div
       className='Card'
       style={{ background: `${cardColor}`, color: `${textColor}` }}>
-      {/*<StageThumbnail/>*/}
-      <Evolvetext
-        name={props.card.name}
-        evolvesFrom={props.card.evolvesFrom}
-        stage={props.card.stage}
-      />
-      <Namebar
-        name={props.card.name}
-        hitPoints={props.card.hitPoints}
-        type={props.card.type}
-      />
+      <div className='top-bar'>
+        {props.card.stage !== 'Basic' && (
+          <Stagethumbnail image={props.card.image} />
+        )}
+        <div style={{ width: '244px' }}>
+          <Evolvetext
+            name={props.card.name}
+            evolvesFrom={props.card.evolvesFrom}
+            stage={props.card.stage}
+          />
+          <Namebar
+            name={props.card.name}
+            hitPoints={props.card.hitPoints}
+            type={props.card.type}
+          />
+        </div>
+      </div>
       <Portrait image={props.card.image} />
       <Statsbar />
       <Attacks

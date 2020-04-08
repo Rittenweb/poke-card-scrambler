@@ -26,17 +26,35 @@
   color: black;
 }
 
+.top-bar {
+  width: 99%;
+  height: 8%;
+  display: flex;
+  justify-content: center;
+}
+
+.Stagethumbnail {
+  height: 43px;
+  width: 43px;
+  transform: translate(2px, 6px);
+  border-radius: 50%;
+  background-size: 280px;
+  background-position-x: -14px;
+  background-position-y: -18px;
+}
+
 .Evolvetext {
   display: flex;
-  width: 95%;
   justify-content: space-between;
-  height: 3%;
+  height: 11px;
+  min-width: 200px;
   font-size: 5pt;
 }
 
 .Namebar {
-  height: 5%;
-  width: 89%;
+  padding-left: 8px;
+  height: 18px;
+  min-width: 200px;
   display: flex;
   justify-content: space-between;
   font-size: 11pt;
@@ -44,6 +62,11 @@
 }
 
 .top-right {
+  display: flex;
+  padding-right: 12px;
+}
+
+.top-left {
   display: flex;
 }
 

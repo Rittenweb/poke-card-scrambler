@@ -5,6 +5,8 @@ import Card from './Card';
 export default function Generator() {
   const [card, setCard] = useState({});
 
+  //TODO: make a method to determine whether evo thumbnail type is base-shaped or neo-shaped
+
   function randomize() {
     let url = getUrl();
     let card = {};
@@ -58,6 +60,7 @@ export default function Generator() {
         return data.json();
       })
       .then((data) => {
+        console.log(data.card);
         card.attacks.push(data.card.attacks[data.card.attacks.length - 1]);
         setCard(card);
       });
