@@ -12,14 +12,17 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
 }
 
 .Card {
   width: 256px;
   height: 364px;
-  border: 14px solid var(--primary-border);
   border-radius: 4%;
+  object-fit: fill;
+}
+
+.card-front {
+  border: 14px solid var(--primary-border);
   display: flex;
   flex-direction: column;
   align-items: center;

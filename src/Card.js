@@ -64,7 +64,7 @@ export default function Card(props) {
 
   return (
     <div
-      className='Card'
+      className='Card card-front'
       style={{ background: `${cardColor}`, color: `${textColor}` }}>
       <div className='top-bar'>
         {props.card.stage !== 'Basic' && (

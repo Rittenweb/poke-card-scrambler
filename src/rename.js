@@ -258,6 +258,7 @@ let pokemon = [
 let prefixes = [
   "Light ",
   "Dark ",
+  "Shining ",
   "Misty's ",
   "Sabrina's ",
   "Erika's ",

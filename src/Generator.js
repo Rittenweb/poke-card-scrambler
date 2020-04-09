@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import getUrl from './getUrl';
 import Card from './Card';
+import Cardback from './Cardback';
 
 export default function Generator() {
   const [card, setCard] = useState({});
+  const [generated, setGenerated] = useState(false);
 
   //TODO: make a method to determine whether evo thumbnail type is base-shaped or neo-shaped
 
@@ -43,6 +45,7 @@ export default function Generator() {
         types.push(null);
         card.weakness = types[Math.floor(Math.random() * 10)];
         card.resistance = types[Math.floor(Math.random() * 10)];
+        console.log(data);
         return fetch(getUrl());
       })
       .then((data) => {
@@ -60,16 +63,16 @@ export default function Generator() {
         return data.json();
       })
       .then((data) => {
-        console.log(data.card);
         card.attacks.push(data.card.attacks[data.card.attacks.length - 1]);
         setCard(card);
+        setGenerated(true);
       });
   }
 
   return (
     <div>
-      <Card card={card} />
-      <button onClick={randomize}>Randomize!</button>
+      {generated ? <Card card={card} /> : <Cardback />}
+      <button onClick={randomize}>{generated ? 'Again!' : 'Flip over!'}</button>
     </div>
   );
 }

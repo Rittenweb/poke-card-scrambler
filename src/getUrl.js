@@ -49,7 +49,7 @@ export default function getUrl() {
     case 6:
       id += 'gym2-';
       suffix = Math.ceil(Math.random() * 99);
-      while (suffix > 16 && suffix < 21) {
+      while (suffix === 14 || (suffix > 16 && suffix < 21)) {
         suffix = Math.ceil(Math.random() * 99);
       }
       suffix = suffix.toString();
@@ -58,14 +58,18 @@ export default function getUrl() {
     case 7:
       id += 'neo1-';
       suffix = Math.ceil(Math.random() * 82).toString();
-      while (suffix === "19") {
+      while (suffix === "19" || suffix === "22") {
         suffix = Math.ceil(Math.random() * 82).toString();
       }
       id += suffix;
       break;
     case 8:
       id += 'neo2-';
-      id += Math.ceil(Math.random() * 71).toString();
+      suffix = Math.ceil(Math.random() * 71).toString();
+      while (suffix === "40") {
+        suffix = Math.ceil(Math.random() * 71).toString();
+      }
+      id += suffix;
       break;
     case 9:
       id += 'neo3-';
