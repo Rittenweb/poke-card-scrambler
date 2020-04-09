@@ -1,6 +1,5 @@
 import React from 'react';
 import getSymbol from './getSymbol';
-import Stagethumbnail from './Stagethumbnail';
 
 export default function Namebar(props) {
   let type = getSymbol(props.type);

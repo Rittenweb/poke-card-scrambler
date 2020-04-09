@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import getUrl from './getUrl';
 import Card from './Card';
 import Cardback from './Cardback';
@@ -7,7 +7,18 @@ export default function Generator() {
   const [card, setCard] = useState({});
   const [generated, setGenerated] = useState(false);
 
+  let nextCard = {};
+
+  useEffect(() => {
+    randomize();
+  }, [card, randomize]);
+
   //TODO: make a method to determine whether evo thumbnail type is base-shaped or neo-shaped
+
+  function getCard() {
+    setCard(nextCard);
+    setGenerated(true);
+  }
 
   function randomize() {
     let url = getUrl();
@@ -64,15 +75,18 @@ export default function Generator() {
       })
       .then((data) => {
         card.attacks.push(data.card.attacks[data.card.attacks.length - 1]);
-        setCard(card);
-        setGenerated(true);
+        nextCard = card;
       });
   }
 
   return (
-    <div>
+    <div
+      className='app-container'
+      style={{ display: 'flex', flexDirection: 'column' }}>
       {generated ? <Card card={card} /> : <Cardback />}
-      <button onClick={randomize}>{generated ? 'Again!' : 'Flip over!'}</button>
+      <button className='gen-button' onClick={getCard}>
+        {generated ? 'Again!' : 'Flip over!'}
+      </button>
     </div>
   );
 }

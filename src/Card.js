@@ -104,9 +104,6 @@ export default function Card(props) {
         <b>Illus. Ken Sugimori</b> ©1995, 96, 98 Nintendo, Creatures, GAMEFREAK.
         ©1999-2000 Wizards. <b>16/151</b>
       </div>
-      {/*
-    <BottomBar/>
-    */}
     </div>
   );
 }

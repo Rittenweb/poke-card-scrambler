@@ -3,11 +3,6 @@ import getSymbol from './getSymbol';
 import rename from './rename';
 
 export default function Attacks(props) {
-  //TODO: Define first render so that none of the tree is made and conditions like this aren't necessary.
-  if (!props.attacks) {
-    return <div className='Attacks'></div>;
-  }
-
   let firstName;
   if (props.attacks[0].type) {
     firstName = 'Pokémon Power: ' + props.attacks[0].name;
