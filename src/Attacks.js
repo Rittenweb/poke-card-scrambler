@@ -7,13 +7,13 @@ export default function Attacks(props) {
   if (props.attacks[0].type) {
     firstName = 'Pokémon Power: ' + props.attacks[0].name;
   } else {
-    firstName = props.attacks[0].name;
     if (props.attacks[0].cost.length > props.attacks[1].cost.length) {
       [props.attacks[0], props.attacks[1]] = [
         props.attacks[1],
         props.attacks[0],
       ];
     }
+    firstName = props.attacks[0].name;
   }
 
   function scaleText(str) {

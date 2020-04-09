@@ -8,19 +8,26 @@ export default function Generator() {
   const [generated, setGenerated] = useState(false);
 
   let nextCard = {};
+  let clickable = true;
 
   useEffect(() => {
     randomize();
   }, [card, randomize]);
 
-  //TODO: make a method to determine whether evo thumbnail type is base-shaped or neo-shaped
-
   function getCard() {
-    setCard(nextCard);
-    setGenerated(true);
+    console.log(clickable + '1');
+
+    if (clickable) {
+      setCard(nextCard);
+      setGenerated(true);
+    } else {
+      //TODO: tell the user they are waiting on the API... test to see if it really is? must be.
+    }
   }
 
   function randomize() {
+    console.log(clickable + '2');
+    clickable = false;
     let url = getUrl();
     let card = {};
     fetch(url)
@@ -38,7 +45,15 @@ export default function Generator() {
         card.stage = data.card.subtype;
         if (card.stage !== 'Basic') {
           card.evolvesFrom = data.card.evolvesFrom;
+          if (card.name.length > 15) {
+            if (card.name.startsWith('Lt')) {
+              card.name = card.name.split(' ')[2];
+            } else {
+              card.name = card.name.split(' ')[1];
+            }
+          }
         }
+        card.series = data.card.series;
         card.retreatNum = Math.floor(Math.random() * 5);
         card.hitPoints = Math.ceil(Math.random() * 10) * 10 + 20;
         let types = [
@@ -76,6 +91,8 @@ export default function Generator() {
       .then((data) => {
         card.attacks.push(data.card.attacks[data.card.attacks.length - 1]);
         nextCard = card;
+        console.log(clickable + '3');
+        clickable = true;
       });
   }
 
@@ -83,6 +100,7 @@ export default function Generator() {
     <div
       className='app-container'
       style={{ display: 'flex', flexDirection: 'column' }}>
+      <img src={require('./logo.svg')} alt='PokeCard Scrambler' />
       {generated ? <Card card={card} /> : <Cardback />}
       <button className='gen-button' onClick={getCard}>
         {generated ? 'Again!' : 'Flip over!'}

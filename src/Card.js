@@ -64,11 +64,11 @@ export default function Card(props) {
 
   return (
     <div
-      className='Card card-front'
+      className='Card'
       style={{ background: `${cardColor}`, color: `${textColor}` }}>
       <div className='top-bar'>
         {props.card.stage !== 'Basic' && (
-          <Stagethumbnail image={props.card.image} />
+          <Stagethumbnail image={props.card.image} series={props.card.series} />
         )}
         <div style={{ width: '244px' }}>
           <Evolvetext
