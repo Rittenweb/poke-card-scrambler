@@ -19,7 +19,7 @@ export default function Generator() {
       setCard(nextCard);
       setGenerated(true);
     } else {
-      //TODO: tell the user they are waiting on the API... test to see if it really is? must be.
+      //TODO: tell the user they are waiting on the API... it randomly gets really slow.
     }
   }
 
@@ -91,14 +91,20 @@ export default function Generator() {
   }
 
   return (
-    <div
-      className='app-container'
-      style={{ display: 'flex', flexDirection: 'column' }}>
-      <img src={require('./assets/logo.svg')} alt='PokeCard Scrambler' />
-      {generated ? <Card card={card} /> : <Cardback />}
-      <button className='gen-button' onClick={getCard}>
-        {generated ? 'Again!' : 'Flip over!'}
-      </button>
+    <div className='app-container'>
+      <header>
+        <img
+          src={require('./assets/logo.svg')}
+          alt='PokeCard Scrambler'
+          className='logo'
+        />
+      </header>
+      <main className='main'>
+        {generated ? <Card card={card} /> : <Cardback />}
+        <button className='gen-button' onClick={getCard}>
+          {generated ? 'Again!' : 'Flip over!'}
+        </button>
+      </main>
     </div>
   );
 }

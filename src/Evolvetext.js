@@ -17,7 +17,7 @@ export default function Evolvetext(props) {
   }
 
   return (
-    <div className='Evolvetext' style={{ paddingLeft: `${paddingLeft}` }}>
+    <div className='evolve-text' style={{ paddingLeft: `${paddingLeft}` }}>
       <div>
         {props.stage === 'Basic' && textLeft}
         {props.stage !== 'Basic' && <i>{textLeft}</i>}

@@ -5,6 +5,6 @@ export default function Cardback() {
     <img
       src={require('./assets/back.jpg')}
       alt='Card back'
-      className='Cardback'></img>
+      className='card-back'></img>
   );
 }

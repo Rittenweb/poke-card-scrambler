@@ -6,7 +6,7 @@ export default function WeakResRet(props) {
   let res = getSymbol(props.resistance);
 
   return (
-    <div className='WeakResRet'>
+    <div className='weak-res-ret'>
       <div className='wrt-el'>
         weakness
         {weak != undefined && (

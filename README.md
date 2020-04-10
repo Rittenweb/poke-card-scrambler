@@ -1,6 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## PokéCard Generator
+## PokéCard Scrambler
 
 A single-page app that makes use of the excellent [Pokémon TCG Developers API](https://pokemontcg.io/)
 to allow random generation of new Pokémon cards by recombining assets of other cards.
@@ -27,7 +27,7 @@ Parts of each generated card that are scrambled from a limited list of choices: 
 - Resistance (of 9 choices)
 - Retreat Cost (from 0 - 4)
 
-Only the first two series, Base and Neo (circa 1999-2002), are included, because card layout shifted dramatically after that.
+Only the first two series of the TCG, Base and Neo (circa 1999-2002), are included, because card layout shifted dramatically after that.
 
 Certain outlier cards like Rocket's Mewtwo (Gym Challenge 14), Elekid (Neo Genesis 22), and Igglybuff (Neo Discovery 40), are also excluded because they do not fit with the template.
 

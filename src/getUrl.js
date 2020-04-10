@@ -21,6 +21,7 @@ export default function getUrl() {
       suffix = Math.ceil(Math.random() * 49).toString();
       while (
         suffix === '16' ||
+        suffix === '31' ||
         suffix === '40' ||
         suffix === '41' ||
         suffix === '42'

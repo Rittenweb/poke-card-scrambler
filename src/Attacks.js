@@ -43,8 +43,8 @@ export default function Attacks(props) {
   let type = getSymbol(props.type);
 
   return (
-    <div className='Attacks'>
-      <div className='attack' style={{ paddingBottom: '4px' }}>
+    <div className='attacks'>
+      <div className='attack first-attack'>
         {props.attacks[0].cost && (
           <div className='cost'>
             {props.attacks[0].cost.map((el) => {
@@ -66,16 +66,14 @@ export default function Attacks(props) {
             })}
           </div>
         )}
-        <div className='attackText' style={{ fontSize: `${textSize1}pt` }}>
+        <div className='attack-text' style={{ fontSize: `${textSize1}pt` }}>
           <b>{firstName}</b> {text1}
         </div>
         {props.attacks[0].damage && (
           <div className='damage'>{props.attacks[0].damage}</div>
         )}
       </div>
-      <div
-        className='attack'
-        style={{ borderTop: '1px solid black', paddingTop: '4px' }}>
+      <div className='attack second-attack'>
         <div className='cost'>
           {props.attacks[1].cost.map((el) => {
             if (el === 'Colorless') {
@@ -95,7 +93,7 @@ export default function Attacks(props) {
             }
           })}
         </div>
-        <div className='attackText' style={{ fontSize: `${textSize2}pt` }}>
+        <div className='attack-text' style={{ fontSize: `${textSize2}pt` }}>
           <b>{props.attacks[1].name}</b> {text2}
         </div>
         {props.attacks[1].damage && (

@@ -1,10 +1,10 @@
 .App {
-  text-align: center;
   box-sizing: border-box;
+  text-align: center;
   --primary-border: hsl(43, 100%, 65%);
 }
 
-.App-header {
+.app-container {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -12,111 +12,115 @@
   justify-content: center;
   background-image: radial-gradient(
       circle at center center,
-      transparent,
-      rgb(0, 0, 0)
+      transparent 0%,
+      rgb(0, 0, 0) 85%
     ),
     linear-gradient(
-      300deg,
-      rgba(198, 198, 198, 0.05) 0%,
-      rgba(198, 198, 198, 0.05) 50%,
-      rgba(11, 11, 11, 0.05) 50%,
-      rgba(11, 11, 11, 0.05) 100%
+      78deg,
+      rgba(192, 192, 192, 0.05) 0%,
+      rgba(192, 192, 192, 0.05) 50%,
+      rgba(60, 60, 60, 0.05) 50%,
+      rgba(60, 60, 60, 0.05) 100%
     ),
     linear-gradient(
-      64deg,
-      rgba(54, 54, 54, 0.05) 0%,
-      rgba(54, 54, 54, 0.05) 50%,
-      rgba(132, 132, 132, 0.05) 50%,
-      rgba(132, 132, 132, 0.05) 100%
-    ),
-    linear-gradient(
-      17deg,
-      rgba(57, 57, 57, 0.05) 0%,
-      rgba(57, 57, 57, 0.05) 50%,
-      rgba(128, 128, 128, 0.05) 50%,
-      rgba(128, 128, 128, 0.05) 100%
-    ),
-    linear-gradient(
-      332deg,
+      227deg,
       rgba(97, 97, 97, 0.05) 0%,
       rgba(97, 97, 97, 0.05) 50%,
-      rgba(85, 85, 85, 0.05) 50%,
-      rgba(85, 85, 85, 0.05) 100%
+      rgba(52, 52, 52, 0.05) 50%,
+      rgba(52, 52, 52, 0.05) 100%
     ),
     linear-gradient(
-      148deg,
+      240deg,
+      rgba(98, 98, 98, 0.05) 0%,
+      rgba(98, 98, 98, 0.05) 50%,
+      rgba(249, 249, 249, 0.05) 50%,
+      rgba(249, 249, 249, 0.05) 100%
+    ),
+    linear-gradient(
+      187deg,
+      rgba(1, 1, 1, 0.05) 0%,
+      rgba(1, 1, 1, 0.05) 50%,
+      rgba(202, 202, 202, 0.05) 50%,
+      rgba(202, 202, 202, 0.05) 100%
+    ),
+    linear-gradient(
+      101deg,
+      rgba(61, 61, 61, 0.05) 0%,
+      rgba(61, 61, 61, 0.05) 50%,
+      rgba(254, 254, 254, 0.05) 50%,
+      rgba(254, 254, 254, 0.05) 100%
+    ),
+    linear-gradient(
+      176deg,
       rgba(237, 237, 237, 0.05) 0%,
       rgba(237, 237, 237, 0.05) 50%,
-      rgba(211, 211, 211, 0.05) 50%,
-      rgba(211, 211, 211, 0.05) 100%
+      rgba(147, 147, 147, 0.05) 50%,
+      rgba(147, 147, 147, 0.05) 100%
     ),
     linear-gradient(
-      142deg,
-      rgba(168, 168, 168, 0.05) 0%,
-      rgba(168, 168, 168, 0.05) 50%,
-      rgba(32, 32, 32, 0.05) 50%,
-      rgba(32, 32, 32, 0.05) 100%
+      304deg,
+      rgba(183, 183, 183, 0.05) 0%,
+      rgba(183, 183, 183, 0.05) 50%,
+      rgba(57, 57, 57, 0.05) 50%,
+      rgba(57, 57, 57, 0.05) 100%
     ),
-    linear-gradient(
-      15deg,
-      rgba(225, 225, 225, 0.05) 0%,
-      rgba(225, 225, 225, 0.05) 50%,
-      rgba(228, 228, 228, 0.05) 50%,
-      rgba(228, 228, 228, 0.05) 100%
-    ),
-    linear-gradient(
-      5deg,
-      rgba(104, 104, 104, 0.05) 0%,
-      rgba(104, 104, 104, 0.05) 50%,
-      rgba(43, 43, 43, 0.05) 50%,
-      rgba(43, 43, 43, 0.05) 100%
-    ),
-    radial-gradient(circle at center center, hsl(290, 5%, 8%), hsl(290, 5%, 8%));
+    radial-gradient(
+      circle at center center,
+      hsl(351, 4%, 12%),
+      hsl(351, 4%, 12%)
+    );
 }
 
-.app-container {
+.main {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+.logo {
+  width: 100%;
+  min-width: 320px;
+  max-width: 700px;
+}
+
 .gen-button {
-  margin: 20px;
   width: 100px;
   height: 40px;
+  margin: 20px;
   border: 3px solid black;
   border-radius: 2px;
-  box-shadow: 2px 2px black;
   font-size: 14pt;
   font-weight: 500;
+  background-color: whitesmoke;
+  box-shadow: 3px 3px black;
 }
 
 .gen-button:active {
-  box-shadow: none;
   transform: scale(0.95);
+  box-shadow: none;
 }
 
 .gen-button:focus {
   outline: none;
 }
 
-.Cardback {
+.card-back {
   width: 284px;
   height: 392px;
-  border-radius: 4%;
   margin-top: 30px;
+  border-radius: 4%;
 }
 
-.Card {
-  margin-top: 30px;
+.card {
   width: 256px;
   height: 364px;
-  border: 14px solid var(--primary-border);
-  border-radius: 4%;
+  margin-top: 30px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  color: black;
+  border: 14px solid var(--primary-border);
+  border-radius: 4%;
 }
 
 .top-bar {
@@ -126,38 +130,41 @@
   justify-content: center;
 }
 
-.thumbnail-base {
+.thumbnail {
   min-height: 47px;
   min-width: 47px;
-  transform: translate(6px, 6px);
   border-radius: 50%;
   background-size: 280px;
+}
+
+.thumbnail-base {
+  transform: translate(6px, 6px);
   background-position-x: -16px;
   background-position-y: -16px;
 }
 
 .thumbnail-neo {
-  min-height: 47px;
-  min-width: 47px;
   transform: translate(-4px, 2px);
-  border-radius: 50%;
-  background-size: 280px;
   background-position-x: -5px;
   background-position-y: -14px;
 }
 
-.Evolvetext {
-  display: flex;
-  justify-content: space-between;
+.name-and-evolve-bar {
+  width: 244px;
+}
+
+.evolve-text {
   height: 11px;
   min-width: 200px;
+  display: flex;
+  justify-content: space-between;
   font-size: 5pt;
 }
 
-.Namebar {
-  padding-left: 8px;
+.name-bar {
   height: 18px;
   min-width: 200px;
+  padding-left: 8px;
   display: flex;
   justify-content: space-between;
   font-size: 11pt;
@@ -183,18 +190,20 @@
   margin-left: 2px;
 }
 
-.Portrait {
+.portrait {
   height: 44%;
   width: 88%;
-  box-shadow: 4px 4px 8px black;
   background-size: 280px;
   background-position-x: -27px;
   background-position-y: -42px;
+  box-shadow: 4px 4px 8px black;
 }
 
-.Statsbar {
+.stats-bar {
   height: 3%;
   width: 77%;
+  margin-top: 3px;
+  font-size: 6pt;
   background: repeating-linear-gradient(
     90deg,
     #9b750a 0px,
@@ -203,11 +212,9 @@
     #caaa4c 120px,
     #9b750a 160px
   );
-  margin-top: 3px;
-  font-size: 6pt;
 }
 
-.Attacks {
+.attacks {
   height: 28%;
   width: 95%;
   display: flex;
@@ -223,6 +230,15 @@
   text-align: left;
 }
 
+.first-attack {
+  padding-bottom: 4px;
+}
+
+.second-attack {
+  padding-top: 4px;
+  border-top: 1px solid black;
+}
+
 .cost {
   display: flex;
   flex-wrap: wrap;
@@ -232,19 +248,24 @@
   flex-shrink: 0;
 }
 
-.attackText {
+.attack-text {
+  line-height: 1.25;
   margin-left: 8px;
   margin-right: 8px;
-  line-height: 1.25;
 }
 
 .damage {
+  margin-right: 4px;
   font-size: 150%;
   font-weight: bold;
-  margin-right: 4px;
 }
 
-.WeakResRet {
+.energy-symbol {
+  height: 13px;
+  margin: 1.5px;
+}
+
+.weak-res-ret {
   height: 7%;
   width: 88%;
   display: flex;
@@ -252,16 +273,34 @@
   border-top: 1px solid black;
 }
 
-.dexbar-wrap {
+.retreat-cost {
+  display: flex;
+}
+
+.wrt-el {
+  margin-top: -3px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 7pt;
+}
+
+.dex-bar {
+  padding-left: 4px;
+  text-align: left;
+}
+
+.dex-bar-wrap {
   height: 100%;
   width: 100%;
-  font-size: 6pt;
   line-height: 8px;
+  font-size: 6pt;
 }
 
 .gradient-wrap {
   height: 5%;
   width: 88%;
+  padding: 1px;
   background: repeating-linear-gradient(
     90deg,
     #9b750a 0px,
@@ -270,26 +309,8 @@
     #caaa4c 120px,
     #9b750a 160px
   );
-  padding: 1px;
-}
-
-.wrt-el {
-  font-size: 7pt;
-  margin-top: -3px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.retreat-cost {
-  display: flex;
-}
-
-.energy-symbol {
-  height: 13px;
-  margin: 1.5px;
 }
 
 .bottom-bar {
-  font-size: 4pt;
+  font-size: 4.2pt;
 }
