@@ -10,7 +10,10 @@ export default function Namebar(props) {
       <div className='top-right'>
         <div className='hit-points'>{props.hitPoints} HP</div>
         {type != undefined && (
-          <img src={require(`./${type}`)} alt='T' className='type-symbol'></img>
+          <img
+            src={require(`./assets/${type}`)}
+            alt='T'
+            className='type-symbol'></img>
         )}
       </div>
     </div>

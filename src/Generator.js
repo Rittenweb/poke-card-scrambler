@@ -15,8 +15,6 @@ export default function Generator() {
   }, [card, randomize]);
 
   function getCard() {
-    console.log(clickable + '1');
-
     if (clickable) {
       setCard(nextCard);
       setGenerated(true);
@@ -26,7 +24,6 @@ export default function Generator() {
   }
 
   function randomize() {
-    console.log(clickable + '2');
     clickable = false;
     let url = getUrl();
     let card = {};
@@ -41,7 +38,6 @@ export default function Generator() {
       .then((data) => {
         card.name = data.card.name;
         card.image = data.card.imageUrl;
-        card.rarity = data.card.rarity;
         card.stage = data.card.subtype;
         if (card.stage !== 'Basic') {
           card.evolvesFrom = data.card.evolvesFrom;
@@ -71,7 +67,6 @@ export default function Generator() {
         types.push(null);
         card.weakness = types[Math.floor(Math.random() * 10)];
         card.resistance = types[Math.floor(Math.random() * 10)];
-        console.log(data);
         return fetch(getUrl());
       })
       .then((data) => {
@@ -91,7 +86,6 @@ export default function Generator() {
       .then((data) => {
         card.attacks.push(data.card.attacks[data.card.attacks.length - 1]);
         nextCard = card;
-        console.log(clickable + '3');
         clickable = true;
       });
   }
@@ -100,7 +94,7 @@ export default function Generator() {
     <div
       className='app-container'
       style={{ display: 'flex', flexDirection: 'column' }}>
-      <img src={require('./logo.svg')} alt='PokeCard Scrambler' />
+      <img src={require('./assets/logo.svg')} alt='PokeCard Scrambler' />
       {generated ? <Card card={card} /> : <Cardback />}
       <button className='gen-button' onClick={getCard}>
         {generated ? 'Again!' : 'Flip over!'}

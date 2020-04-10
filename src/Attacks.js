@@ -52,14 +52,14 @@ export default function Attacks(props) {
                 return (
                   <img
                     alt='C'
-                    src={require(`./colorless.png`)}
+                    src={require(`./assets/colorless.png`)}
                     className='energy-symbol'></img>
                 );
               } else {
                 return (
                   <img
                     alt='C'
-                    src={require(`./${type}`)}
+                    src={require(`./assets/${type}`)}
                     className='energy-symbol'></img>
                 );
               }
@@ -82,14 +82,14 @@ export default function Attacks(props) {
               return (
                 <img
                   alt='C'
-                  src={require(`./colorless.png`)}
+                  src={require(`./assets/colorless.png`)}
                   className='energy-symbol'></img>
               );
             } else {
               return (
                 <img
                   alt='C'
-                  src={require(`./${type}`)}
+                  src={require(`./assets/${type}`)}
                   className='energy-symbol'></img>
               );
             }

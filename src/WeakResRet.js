@@ -11,7 +11,7 @@ export default function WeakResRet(props) {
         weakness
         {weak != undefined && (
           <img
-            src={require(`./${weak}`)}
+            src={require(`./assets/${weak}`)}
             alt='W'
             className='energy-symbol'></img>
         )}
@@ -20,7 +20,7 @@ export default function WeakResRet(props) {
         resistance
         {res != undefined && (
           <img
-            src={require(`./${res}`)}
+            src={require(`./assets/${res}`)}
             alt='W'
             className='energy-symbol'></img>
         )}
@@ -30,25 +30,25 @@ export default function WeakResRet(props) {
         <div className='retreat-cost'>
           {props.retreatNum > 0 && (
             <img
-              src={require('./colorless.png')}
+              src={require('./assets/colorless.png')}
               alt='C'
               className='energy-symbol'></img>
           )}
           {props.retreatNum > 1 && (
             <img
-              src={require('./colorless.png')}
+              src={require('./assets/colorless.png')}
               alt='C'
               className='energy-symbol'></img>
           )}
           {props.retreatNum > 2 && (
             <img
-              src={require('./colorless.png')}
+              src={require('./assets/colorless.png')}
               alt='C'
               className='energy-symbol'></img>
           )}
           {props.retreatNum > 3 && (
             <img
-              src={require('./colorless.png')}
+              src={require('./assets/colorless.png')}
               alt='C'
               className='energy-symbol'></img>
           )}
