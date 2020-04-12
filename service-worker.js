@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/poke-card-scrambler/precache-manifest.0d9ebe3fbedb1788ca694feefbea40c5.js"
+  "/poke-card-scrambler/precache-manifest.6d4261a6cd3d38d368df4a308fb92c5c.js"
 );
 
 self.addEventListener('message', (event) => {

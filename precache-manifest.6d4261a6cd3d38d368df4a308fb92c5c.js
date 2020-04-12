@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f95a0732c086bf57802c34bd4bce0cb7",
+    "revision": "2935c919b90c44ac6c98e66964cd4931",
     "url": "/poke-card-scrambler/index.html"
   },
   {
-    "revision": "14d9ceeb346eb594043f",
-    "url": "/poke-card-scrambler/static/css/main.6ca7cd89.chunk.css"
+    "revision": "be896b052fc3ab6cfd0b",
+    "url": "/poke-card-scrambler/static/css/main.a9284047.chunk.css"
   },
   {
     "revision": "62e6b85f831f667de7f9",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/poke-card-scrambler/static/js/2.13ae3798.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "14d9ceeb346eb594043f",
-    "url": "/poke-card-scrambler/static/js/main.fa707ecf.chunk.js"
+    "revision": "be896b052fc3ab6cfd0b",
+    "url": "/poke-card-scrambler/static/js/main.e57c619a.chunk.js"
   },
   {
     "revision": "5cc89f065b1ef1e0f739",
