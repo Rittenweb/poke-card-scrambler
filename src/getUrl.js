@@ -83,9 +83,9 @@ export default function getUrl() {
       break;
     case 10:
       id += 'neo4-';
-      suffix = Math.ceil(Math.random() * 113);
+      suffix = Math.ceil(Math.random() * 112);
       while (suffix === 16 || (suffix > 91 && suffix < 106)) {
-        suffix = Math.ceil(Math.random() * 113);
+        suffix = Math.ceil(Math.random() * 112);
       }
       suffix = suffix.toString();
       id += suffix;

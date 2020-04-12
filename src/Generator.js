@@ -6,6 +6,7 @@ import Cardback from './Cardback';
 export default function Generator() {
   const [card, setCard] = useState({});
   const [generated, setGenerated] = useState(false);
+  const [waiting, setWaiting] = useState(false);
 
   let nextCard = {};
   let clickable = true;
@@ -18,8 +19,9 @@ export default function Generator() {
     if (clickable) {
       setCard(nextCard);
       setGenerated(true);
+      setWaiting(false);
     } else {
-      //TODO: tell the user they are waiting on the API... it randomly gets really slow.
+      setWaiting(true);
     }
   }
 
@@ -104,6 +106,9 @@ export default function Generator() {
         <button className='gen-button' onClick={getCard}>
           {generated ? 'Again!' : 'Flip over!'}
         </button>
+        {waiting && (
+          <div className='waiting-flag'>Waiting on the API . . . Try again</div>
+        )}
       </main>
     </div>
   );

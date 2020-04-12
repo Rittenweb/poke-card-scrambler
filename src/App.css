@@ -104,6 +104,10 @@
   outline: none;
 }
 
+.waiting-flag {
+  color: whitesmoke;
+}
+
 .card-back {
   width: 284px;
   height: 392px;
@@ -312,5 +316,6 @@
 }
 
 .bottom-bar {
+  margin-bottom: 1px;
   font-size: 4.2pt;
 }
