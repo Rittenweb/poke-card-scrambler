@@ -17,9 +17,19 @@ export default function Generator() {
 
   function getCard() {
     if (clickable) {
-      setCard(nextCard);
-      setGenerated(true);
       setWaiting(false);
+      setCard({ ...card, animation: 'flipout' });
+      if (generated) {
+        setTimeout(() => {
+          setCard({ animation: 'flipinout' });
+        }, 300);
+      }
+      let time = 900;
+      if (!generated) time = 300;
+      setTimeout(() => {
+        setCard({ ...nextCard, animation: 'flipin' });
+        setGenerated(true);
+      }, time);
     } else {
       setWaiting(true);
     }
@@ -102,7 +112,11 @@ export default function Generator() {
         />
       </header>
       <main className='main'>
-        {generated ? <Card card={card} /> : <Cardback />}
+        {Object.entries(card).length > 1 ? (
+          <Card card={card} />
+        ) : (
+          <Cardback animation={card.animation} />
+        )}
         <button className='gen-button' onClick={getCard}>
           {generated ? 'Again!' : 'Flip over!'}
         </button>

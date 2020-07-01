@@ -319,3 +319,45 @@
   margin-bottom: 1px;
   font-size: 4.2pt;
 }
+
+.flipin {
+  animation: flipIn 300ms;
+}
+
+.flipout {
+  animation: flipOut 300ms;
+}
+
+.flipinout {
+  animation: flipInAndOut 600ms;
+}
+
+@keyframes flipOut {
+  0% {
+    transform: scaleX(1);
+  }
+  100% {
+    transform: scaleX(0);
+  }
+}
+
+@keyframes flipIn {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes flipInAndOut {
+  0% {
+    transform: scaleX(0);
+  }
+  50% {
+    transform: scaleX(1);
+  }
+  100% {
+    transform: scaleX(0);
+  }
+}

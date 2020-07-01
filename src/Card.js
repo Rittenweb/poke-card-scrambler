@@ -13,16 +13,17 @@ export default function Card(props) {
 
   return (
     <div
-      className='card'
+      className={`card ${props.card.animation}`}
       style={{ background: `${cardColor}`, color: `${textColor}` }}>
-      <Topbar 
-        stage={props.card.stage} 
-        image={props.card.image} 
-        series={props.card.series} 
-        name={props.card.name} 
-        evolvesFrom={props.card.evolvesFrom} 
-        hitPoints={props.card.hitPoints} 
-        type={props.card.type}/>
+      <Topbar
+        stage={props.card.stage}
+        image={props.card.image}
+        series={props.card.series}
+        name={props.card.name}
+        evolvesFrom={props.card.evolvesFrom}
+        hitPoints={props.card.hitPoints}
+        type={props.card.type}
+      />
       <Portrait image={props.card.image} />
       <Statsbar />
       <Attacks
