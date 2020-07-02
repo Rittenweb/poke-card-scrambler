@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/poke-card-scrambler/static/css/main.a9284047.chunk.css",
-    "main.js": "/poke-card-scrambler/static/js/main.e57c619a.chunk.js",
-    "main.js.map": "/poke-card-scrambler/static/js/main.e57c619a.chunk.js.map",
+    "main.css": "/poke-card-scrambler/static/css/main.27fa378c.chunk.css",
+    "main.js": "/poke-card-scrambler/static/js/main.c897ba5d.chunk.js",
+    "main.js.map": "/poke-card-scrambler/static/js/main.c897ba5d.chunk.js.map",
     "runtime-main.js": "/poke-card-scrambler/static/js/runtime-main.85c34a08.js",
     "runtime-main.js.map": "/poke-card-scrambler/static/js/runtime-main.85c34a08.js.map",
-    "static/js/2.13ae3798.chunk.js": "/poke-card-scrambler/static/js/2.13ae3798.chunk.js",
-    "static/js/2.13ae3798.chunk.js.map": "/poke-card-scrambler/static/js/2.13ae3798.chunk.js.map",
+    "static/js/2.5f002a29.chunk.js": "/poke-card-scrambler/static/js/2.5f002a29.chunk.js",
+    "static/js/2.5f002a29.chunk.js.map": "/poke-card-scrambler/static/js/2.5f002a29.chunk.js.map",
     "index.html": "/poke-card-scrambler/index.html",
-    "precache-manifest.6d4261a6cd3d38d368df4a308fb92c5c.js": "/poke-card-scrambler/precache-manifest.6d4261a6cd3d38d368df4a308fb92c5c.js",
+    "precache-manifest.e55e24f0be45d697129177c80ef3a7aa.js": "/poke-card-scrambler/precache-manifest.e55e24f0be45d697129177c80ef3a7aa.js",
     "service-worker.js": "/poke-card-scrambler/service-worker.js",
-    "static/css/main.a9284047.chunk.css.map": "/poke-card-scrambler/static/css/main.a9284047.chunk.css.map",
-    "static/js/2.13ae3798.chunk.js.LICENSE.txt": "/poke-card-scrambler/static/js/2.13ae3798.chunk.js.LICENSE.txt",
+    "static/css/main.27fa378c.chunk.css.map": "/poke-card-scrambler/static/css/main.27fa378c.chunk.css.map",
+    "static/js/2.5f002a29.chunk.js.LICENSE.txt": "/poke-card-scrambler/static/js/2.5f002a29.chunk.js.LICENSE.txt",
     "static/media/back.jpg": "/poke-card-scrambler/static/media/back.b4ff4beb.jpg",
     "static/media/logo.svg": "/poke-card-scrambler/static/media/logo.8bb20392.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.85c34a08.js",
-    "static/js/2.13ae3798.chunk.js",
-    "static/css/main.a9284047.chunk.css",
-    "static/js/main.e57c619a.chunk.js"
+    "static/js/2.5f002a29.chunk.js",
+    "static/css/main.27fa378c.chunk.css",
+    "static/js/main.c897ba5d.chunk.js"
   ]
 }
