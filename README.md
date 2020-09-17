@@ -5,6 +5,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 A single-page app that makes use of the excellent [Pokémon TCG Developers API](https://pokemontcg.io/)
 to allow random generation of new Pokémon cards by recombining assets of other cards.
 
+![Screenshot](src/assets/github-preview.png)
+![Screenshot](src/assets/readme_screenshot.png)
+
 ### Current Functionality
 
 Parts of each generated card that are kept from the basis card: <br/>
