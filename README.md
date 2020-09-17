@@ -35,3 +35,7 @@ Only the first two series of the TCG, Base and Neo (circa 1999-2002), are includ
 Certain outlier cards like Rocket's Mewtwo (Gym Challenge 14), Elekid (Neo Genesis 22), and Igglybuff (Neo Discovery 40), are also excluded because they do not fit with the template.
 
 Pokémon height, weight, and Pokédex entry are not generated dynamically, because they are not offered by the Pokémon TCG Developers API. Instead, every card uses the height, weight, and Pokédex entry of Omanyte (Fossil 52), because I like it.
+
+## Local Installation
+
+Simply clone the repository to your computer, then in its root directory run `npm install` and then `npm start`. It should be running on localhost:3000
